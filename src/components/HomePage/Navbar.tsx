@@ -12,7 +12,7 @@ const activeUser = {
 
 function Navbar() {
   return (
-    <div className="flex justify-between mx-10">
+    <div className="flex justify-between mx-10 h-[75px]">
       {/* left */}
       <div className="flex items-center">
         <img src={logo} alt="logo" className="w-[100px] m-1 cursor-pointer" />
