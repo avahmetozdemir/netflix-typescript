@@ -1,8 +1,12 @@
+import HomePage from "./pages/HomePage";
+import StartingPage from "./pages/StartingPage";
+
 function App() {
   return (
-    <div className="">
-      <h1>Hello</h1>
-    </div>
+    <>
+      {/* <StartingPage /> */}
+      <HomePage />
+    </>
   );
 }
 
