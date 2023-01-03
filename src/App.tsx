@@ -1,3 +1,4 @@
+import BrowseByLanguagePage from "./pages/BrowseByLanguagePage";
 import HomePage from "./pages/HomePage";
 import MyListPage from "./pages/MyListPage";
 import StartingPage from "./pages/StartingPage";
@@ -7,7 +8,8 @@ function App() {
     <>
       {/* <StartingPage /> */}
       {/* <HomePage /> */}
-      <MyListPage />
+      {/* <MyListPage /> */}
+      <BrowseByLanguagePage />
     </>
   );
 }
