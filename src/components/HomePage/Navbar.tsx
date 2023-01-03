@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../../assets/icons/netflix.png";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { BellAlertIcon } from "@heroicons/react/24/outline";
@@ -11,6 +11,11 @@ const activeUser = {
 };
 
 function Navbar() {
+  const [showSearch, setShowSearch] = useState(false);
+  function searchInputHandler() {
+    setShowSearch(!showSearch);
+  }
+
   return (
     <div className="flex justify-between mx-10 h-[75px]">
       {/* left */}
@@ -36,7 +41,26 @@ function Navbar() {
 
       {/* right */}
       <div className="flex flex-row items-center space-x-4 ">
-        <MagnifyingGlassIcon className="h-7 w-7 text-white cursor-pointer" />
+        {!showSearch && (
+          <MagnifyingGlassIcon
+            className="h-7 w-7 text-white cursor-pointer"
+            onClick={searchInputHandler}
+          />
+        )}
+        {showSearch && (
+          <>
+            <input
+              className="bg-black/40 p-1"
+              type="text"
+              placeholder="Title,people,genres"
+              onBlur={() => setShowSearch(false)}
+            />
+            <MagnifyingGlassIcon
+              className="h-7 w-7 text-white cursor-pointer"
+              onClick={() => {}}
+            />
+          </>
+        )}
         <BellAlertIcon className="h-7 w-7 text-white cursor-pointer" />
         <div className="flex items-center space-x-1">
           <img
