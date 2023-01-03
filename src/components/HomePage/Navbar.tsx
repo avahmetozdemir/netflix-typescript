@@ -32,7 +32,7 @@ function Navbar() {
           <img
             src={activeUser.image}
             alt="activeUser"
-            className="h-7 w-7 rounded-lg cursor-pointer"
+            className="h-6 w-7 rounded-lg cursor-pointer"
           />
           <div>
             <ChevronDownIcon className="h-6 w-6 hover:rotate-180 text-white cursor-pointer" />
