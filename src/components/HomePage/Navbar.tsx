@@ -16,12 +16,22 @@ function Navbar() {
       {/* left */}
       <div className="flex items-center">
         <img src={logo} alt="logo" className="w-[100px] m-1 cursor-pointer" />
-        <h1 className="text-white m-1 cursor-pointer">Home</h1>
-        <h1 className="text-white m-1 cursor-pointer">TV Shows</h1>
-        <h1 className="text-white m-1 cursor-pointer">Movies</h1>
-        <h1 className="text-white m-1 cursor-pointer">New & Popular</h1>
-        <h1 className="text-white m-1 cursor-pointer">My List</h1>
-        <h1 className="text-white m-1 cursor-pointer">Browse by Languages</h1>
+        <h1 className="text-white m-1 cursor-pointer hover:scale-105">Home</h1>
+        <h1 className="text-white m-1 cursor-pointer hover:scale-105">
+          TV Shows
+        </h1>
+        <h1 className="text-white m-1 cursor-pointer hover:scale-105">
+          Movies
+        </h1>
+        <h1 className="text-white m-1 cursor-pointer hover:scale-105">
+          New & Popular
+        </h1>
+        <h1 className="text-white m-1 cursor-pointer hover:scale-105">
+          My List
+        </h1>
+        <h1 className="text-white m-1 cursor-pointer hover:scale-105">
+          Browse by Languages
+        </h1>
       </div>
 
       {/* right */}

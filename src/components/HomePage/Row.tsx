@@ -17,20 +17,17 @@ interface Movie extends Object {
 
 function Row({ categoryName, movies }: CategoryProps) {
   return (
-    <div className="text-white ml-[20px]">
+    <div className="text-white ml-[20px] mt-2">
       <h1 className="cursor-pointer">{categoryName}</h1>
 
-      <div className=" flex overflow-y-hidden overflow-x-scroll whitespace-nowrap overflow-auto scrollbar-hide p-[20px]">
-        {/* Carousel */}
-        {movies.map(
-          (movie: Movie): React.ReactNode => (
-            <img
-              className=" max-h-[100px] object-contain mr-3 w-full transition-transform delay-450 hover:scale-105 cursor-pointer"
-              src={movie.banner}
-              alt={movie.title}
-            />
-          )
-        )}
+      <div className="flex overflow-y-hidden overflow-x-scroll scrollbar-hide p-[20px]">
+        {movies.map((movie: Movie) => (
+          <img
+            className={`h-[100px] w-full mr-2  hover:scale-150  cursor-pointer hover:before:content-["${movie.title} Ahmet"]`}
+            src={movie.banner}
+            alt={movie.title}
+          />
+        ))}
       </div>
     </div>
   );
