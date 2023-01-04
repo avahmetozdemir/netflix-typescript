@@ -58,7 +58,16 @@ function SubNavbar({
           <HiSquares2X2 color="white" size={24} />
           {showSuggestion && (
             <div className="flex items-center justify-between">
-              <p className="text-white">Suggestions For You</p>
+              <select
+                name="suggest"
+                id=""
+                className=" text-white text-sm appearance-none mr-3 bg-[#181512] focus:outline-none "
+              >
+                <option value="suggestion">Suggestion For You</option>
+                <option value="released">Year Released</option>
+                <option value="a-z">A-Z</option>
+                <option value="z-a">Z-A</option>
+              </select>{" "}
               <AiFillCaretDown color="white" size={12} />
             </div>
           )}
