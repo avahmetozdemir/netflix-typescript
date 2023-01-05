@@ -10,6 +10,7 @@ interface SubNavbarProps {
   setShowSuggestion: (boolean: boolean) => void;
   showGender: boolean;
   setShowGender: (boolean: boolean) => void;
+  pageInfo: string;
 }
 
 function SubNavbar({
@@ -19,6 +20,7 @@ function SubNavbar({
   showSuggestion,
   setShowGender,
   showGender,
+  pageInfo,
 }: SubNavbarProps) {
   function genresHandler() {
     setShowGender(!showGender);
@@ -35,7 +37,7 @@ function SubNavbar({
     <div className="flex justify-between mx-10 mt-2">
       {/* left */}
       <div className="flex space-x-10 items-center">
-        <h1 className="text-3xl text-white">TV Shows</h1>
+        <h1 className="text-3xl text-white">{pageInfo}</h1>
         <div
           className=" cursor-pointer border border-white w-[150px] h-[30px] bg-black "
           onClick={genresHandler}

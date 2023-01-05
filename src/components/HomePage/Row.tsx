@@ -17,7 +17,7 @@ interface Movie extends Object {
 
 function Row({ categoryName, movies }: CategoryProps) {
   return (
-    <div className="text-white ml-[20px] mt-2">
+    <div className="text-white ml-10 mt-2">
       <h1 className="cursor-pointer">{categoryName}</h1>
 
       <div className="flex overflow-y-hidden overflow-x-scroll scrollbar-hide p-[20px]">

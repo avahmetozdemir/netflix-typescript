@@ -5,6 +5,7 @@ import { BellAlertIcon } from "@heroicons/react/24/outline";
 import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import Ring from "../Navbar/Ring";
 import { Link } from "react-router-dom";
+import UserInfo from "../Navbar/UserInfo";
 const activeUser = {
   id: 2,
   image:
@@ -15,6 +16,7 @@ const activeUser = {
 function Navbar() {
   const [showSearch, setShowSearch] = useState(false);
   const [showMessages, setShowMessages] = useState(false);
+  const [showUserInfo, setShowUserInfo] = useState(false);
   function searchInputHandler() {
     setShowSearch(!showSearch);
   }
@@ -80,7 +82,11 @@ function Navbar() {
             onMouseOut={() => setShowMessages(false)}
           />
 
-          <div className="flex items-center space-x-1">
+          <div
+            className="flex items-center space-x-1"
+            onMouseOver={() => setShowUserInfo(true)}
+            onMouseOut={() => setShowUserInfo(false)}
+          >
             <img
               src={activeUser.image}
               alt="activeUser"
@@ -99,8 +105,21 @@ function Navbar() {
             onMouseOver={() => setShowMessages(true)}
             onMouseOut={() => setShowMessages(false)}
           >
-            <div className="pt-4">
+            <div className="pt-4 absolute z-10 right-5">
               <Ring />
+            </div>
+          </div>
+        </div>
+      )}
+      {showUserInfo && (
+        <div className="relative" onMouseOver={() => setShowUserInfo(true)}>
+          <div
+            className="absolute right-[100px] top-[-30px]"
+            onMouseOver={() => setShowUserInfo(true)}
+            onMouseOut={() => setShowUserInfo(false)}
+          >
+            <div className="pt-4 absolute z-10 -right-14">
+              <UserInfo />
             </div>
           </div>
         </div>

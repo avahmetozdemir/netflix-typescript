@@ -1,6 +1,8 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Movies from "./components/BrowseByLanguagePage/Movies";
 import BrowseByLanguagePage from "./pages/BrowseByLanguagePage";
 import HomePage from "./pages/HomePage";
+import MoviesPage from "./pages/MoviesPage";
 import MyListPage from "./pages/MyListPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import StartingPage from "./pages/StartingPage";
@@ -18,6 +20,7 @@ function App() {
           element={<BrowseByLanguagePage />}
         />
         <Route path="/browse/tv-shows" element={<TvShowsPage />} />
+        <Route path="/browse/movies" element={<MoviesPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
