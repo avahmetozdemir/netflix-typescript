@@ -4,6 +4,7 @@ import BrowseByLanguagePage from "./pages/BrowseByLanguagePage";
 import HomePage from "./pages/HomePage";
 import MoviesPage from "./pages/MoviesPage";
 import MyListPage from "./pages/MyListPage";
+import NewAndPopularPage from "./pages/NewAndPopularPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import StartingPage from "./pages/StartingPage";
 import TvShowsPage from "./pages/TvShowsPage";
@@ -21,6 +22,7 @@ function App() {
         />
         <Route path="/browse/tv-shows" element={<TvShowsPage />} />
         <Route path="/browse/movies" element={<MoviesPage />} />
+        <Route path="/latest" element={<NewAndPopularPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

@@ -5,7 +5,7 @@ import { VscAccount } from "react-icons/vsc";
 import { MdOutlineHelpOutline } from "react-icons/md";
 function UserInfo() {
   return (
-    <div className="bg-black/40 w-[200px] h-[300px] border-1 border-white ">
+    <div className="bg-black/40 w-[200px] h-[300px] border-2 border-white ">
       <div className="flex flex-col border-b border-gray-300">
         <div className="flex px-2 mt-3 space-x-2 cursor-pointer hover:underline">
           <img
@@ -26,19 +26,19 @@ function UserInfo() {
       </div>
       <div className="border-b border-gray-300">
         <div className="flex p-2 space-x-3 cursor-pointer">
-          <BsPencil size={24} color="white" />{" "}
+          <BsPencil size={24} color="#7A7479" />{" "}
           <span className="text-white">Manage Profile</span>{" "}
         </div>
         <div className="flex p-2 space-x-3 cursor-pointer">
-          <BiHomeSmile size={24} color="white" />{" "}
+          <BiHomeSmile size={24} color="#7A7479" />{" "}
           <span className="text-white">Transfer Profile</span>{" "}
         </div>
         <div className="flex p-2 space-x-3 cursor-pointer">
-          <VscAccount size={24} color="white" />{" "}
+          <VscAccount size={24} color="#7A7479" />{" "}
           <span className="text-white">Account</span>{" "}
         </div>
         <div className="flex p-2 space-x-3 cursor-pointer">
-          <MdOutlineHelpOutline size={24} color="white" />{" "}
+          <MdOutlineHelpOutline size={24} color="#7A7479" />{" "}
           <span className="text-white">Help Center</span>{" "}
         </div>
       </div>
