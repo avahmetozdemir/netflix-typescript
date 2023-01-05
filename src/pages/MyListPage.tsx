@@ -1,4 +1,4 @@
-import Navbar from "../components/HomePage/Navbar";
+import Navbar from "../components/UI/Navbar";
 import MyList from "../components/MyListPage/MyList";
 function MyListPage() {
   return (

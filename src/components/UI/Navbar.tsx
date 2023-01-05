@@ -4,6 +4,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { BellAlertIcon } from "@heroicons/react/24/outline";
 import { ChevronUpIcon, ChevronDownIcon } from "@heroicons/react/24/solid";
 import Ring from "../Navbar/Ring";
+import { Link } from "react-router-dom";
 const activeUser = {
   id: 2,
   image:
@@ -23,24 +24,31 @@ function Navbar() {
       <div className="flex justify-between mx-10 h-[75px]">
         {/* left */}
         <div className="flex items-center">
-          <img src={logo} alt="logo" className="w-[100px] m-1 cursor-pointer" />
+          <Link to="/">
+            {" "}
+            <img
+              src={logo}
+              alt="logo"
+              className="w-[100px] m-1 cursor-pointer"
+            />
+          </Link>
           <h1 className="text-white m-1 cursor-pointer hover:scale-105">
-            Home
+            <Link to={"/browse"}>Home</Link>
           </h1>
           <h1 className="text-white m-1 cursor-pointer hover:scale-105">
-            TV Shows
+            <Link to="/browse/tv-shows">TV Shows</Link>
           </h1>
           <h1 className="text-white m-1 cursor-pointer hover:scale-105">
-            Movies
+            <Link to="/browse/movies">Movies</Link>
           </h1>
           <h1 className="text-white m-1 cursor-pointer hover:scale-105">
-            New & Popular
+            <Link to="/latest">New & Popular</Link>
           </h1>
           <h1 className="text-white m-1 cursor-pointer hover:scale-105">
-            My List
+            <Link to="/browse/mylist">My List</Link>
           </h1>
           <h1 className="text-white m-1 cursor-pointer hover:scale-105">
-            Browse by Languages
+            <Link to="/browse/original-audio">Browse by Languages</Link>
           </h1>
         </div>
 

@@ -1,6 +1,6 @@
 import React, { useRef, useState } from "react";
 import Footer from "../components/HomePage/Footer";
-import Navbar from "../components/HomePage/Navbar";
+import Navbar from "../components/UI/Navbar";
 import Row from "../components/HomePage/Row";
 import BannerPage from "../components/TvShowsPage/BannerPage";
 import Genres from "../components/TvShowsPage/Genres";

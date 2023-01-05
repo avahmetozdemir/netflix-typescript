@@ -1,6 +1,7 @@
 import React from "react";
 import UserLogin from "../components/StartingPage/UserLogin";
 import plusIcon from "../assets/icons/plus.png";
+import { Link } from "react-router-dom";
 const users = [
   {
     id: 1,
@@ -34,11 +35,13 @@ function StartingPage() {
         <h1 className="text-white text-center text-4xl mb-4">
           Who's watching?
         </h1>
-        <div className="flex flex-row mb-5">
-          {users.map((user) => (
-            <UserLogin name={user.name} imgUrl={user.image} />
-          ))}
-        </div>
+        <Link to="/browse">
+          <div className="flex flex-row mb-5">
+            {users.map((user) => (
+              <UserLogin name={user.name} imgUrl={user.image} />
+            ))}
+          </div>
+        </Link>
         <div className="border border-white w-[150px] mx-auto cursor-pointer ">
           <h1 className="text-center text-white p-2">Manage Profiles</h1>
         </div>
