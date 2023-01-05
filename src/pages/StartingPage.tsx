@@ -29,7 +29,7 @@ const users = [
 
 function StartingPage() {
   return (
-    <div className="h-screen bg-[#181512] flex justify-center items-center ">
+    <div className="min-h-screen bg-[#181512] flex justify-center items-center ">
       <div className="flex flex-col">
         <h1 className="text-white text-center text-4xl mb-4">
           Who's watching?

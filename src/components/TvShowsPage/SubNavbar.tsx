@@ -8,6 +8,8 @@ interface SubNavbarProps {
   setShowBannerPage: (boolean: boolean) => void;
   showSuggestion: boolean;
   setShowSuggestion: (boolean: boolean) => void;
+  showGender: boolean;
+  setShowGender: (boolean: boolean) => void;
 }
 
 function SubNavbar({
@@ -15,8 +17,12 @@ function SubNavbar({
   setShowBannerPage,
   showBannerPage,
   showSuggestion,
+  setShowGender,
+  showGender,
 }: SubNavbarProps) {
-  function genresHandler() {}
+  function genresHandler() {
+    setShowGender(!showGender);
+  }
   function bannerPageHandler() {
     setShowSuggestion(false);
     setShowBannerPage(true);
