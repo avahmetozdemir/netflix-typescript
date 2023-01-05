@@ -1,5 +1,8 @@
 import React from "react";
 import { BsPencil } from "react-icons/bs";
+import { BiHomeSmile } from "react-icons/bi";
+import { VscAccount } from "react-icons/vsc";
+import { MdOutlineHelpOutline } from "react-icons/md";
 function UserInfo() {
   return (
     <div className="bg-black/40 w-[200px] h-[300px] border-1 border-white ">
@@ -8,7 +11,7 @@ function UserInfo() {
           <img
             src="https://nextluxury.com/wp-content/uploads/Homer-Simpson-e1648441168355.jpg"
             alt="Yüksel"
-            className="w-10 h-10 rounded-lg"
+            className="w-8 h-10 rounded-lg"
           />
           <p className="text-white">Yüksel</p>
         </div>
@@ -16,18 +19,33 @@ function UserInfo() {
           <img
             src="https://64.media.tumblr.com/b29d66d276cd8070d29ff53df060ee4d/tumblr_nrwp8j6yzZ1rxw2uko8_1280.jpg"
             alt="Ebrar"
-            className="w-10 h-10 rounded-lg"
+            className="w-8 h-10 rounded-lg"
           />
           <p className="text-white">Ebrar</p>
         </div>
       </div>
-      <div>
-        <div className="flex">
-          <BsPencil size={24} color="gray" /> <span>Manage Profile</span>{" "}
+      <div className="border-b border-gray-300">
+        <div className="flex p-2 space-x-3 cursor-pointer">
+          <BsPencil size={24} color="white" />{" "}
+          <span className="text-white">Manage Profile</span>{" "}
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
+        <div className="flex p-2 space-x-3 cursor-pointer">
+          <BiHomeSmile size={24} color="white" />{" "}
+          <span className="text-white">Transfer Profile</span>{" "}
+        </div>
+        <div className="flex p-2 space-x-3 cursor-pointer">
+          <VscAccount size={24} color="white" />{" "}
+          <span className="text-white">Account</span>{" "}
+        </div>
+        <div className="flex p-2 space-x-3 cursor-pointer">
+          <MdOutlineHelpOutline size={24} color="white" />{" "}
+          <span className="text-white">Help Center</span>{" "}
+        </div>
+      </div>
+      <div className="flex items-center justify-center mt-2 cursor-pointer ">
+        <h1 className="text-white text-center text-[15px]">
+          Sign out of Netflix
+        </h1>
       </div>
     </div>
   );
