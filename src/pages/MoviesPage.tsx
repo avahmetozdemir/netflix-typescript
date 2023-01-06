@@ -47,13 +47,7 @@ function MoviesPage() {
           <BannerPage />
         </div>
       )}
-      {categories.map((category) => (
-        <Row
-          key={category.id}
-          categoryName={category.categoryName}
-          movies={category.films}
-        />
-      ))}
+
       <Footer />
     </div>
   );

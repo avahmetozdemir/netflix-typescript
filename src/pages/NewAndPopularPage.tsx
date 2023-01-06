@@ -9,13 +9,6 @@ function NewAndPopularPage() {
     <div className="relative min-h-screen bg-[#181512]">
       <Navbar />
 
-      {categories.map((category) => (
-        <Row
-          key={category.id}
-          categoryName={category.categoryName}
-          movies={category.films}
-        />
-      ))}
       <Footer />
     </div>
   );

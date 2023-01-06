@@ -2,12 +2,10 @@ import React, { useEffect, useState } from "react";
 import FilmBanner from "../components/HomePage/FilmBanner";
 import Footer from "../components/HomePage/Footer";
 import Navbar from "../components/UI/Navbar";
-import Row from "../components/HomePage/Row";
-import { categories } from "../data";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import { RootState, useAppDispatch } from "../redux/store";
 import { fetchMovies, getGenres } from "../redux/features/NetflixSlice";
-import axios from "axios";
+import Rows from "../components/UI/Rows";
 
 function HomePage() {
   const genres = useSelector((state: RootState) => state.netflix.genres);
@@ -24,16 +22,10 @@ function HomePage() {
   console.log(movies);
 
   return (
-    <div className=" bg-[#181512]">
+    <div className="min-h-screen bg-[#181512]">
       <Navbar />
       <FilmBanner />
-      {categories.map((category) => (
-        <Row
-          key={category.id}
-          categoryName={category.categoryName}
-          movies={category.films}
-        />
-      ))}
+      <Rows movies={movies} />
       <Footer />
     </div>
   );

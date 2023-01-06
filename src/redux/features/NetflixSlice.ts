@@ -6,7 +6,7 @@ export interface NetflixState {
   genres: Array<Genre>;
 }
 
-interface Movie {
+export interface Movie {
   genre_ids: Array<number>;
   backdrop_path: string;
   id: number;
@@ -14,12 +14,12 @@ interface Movie {
   original_title: string;
 }
 
-interface Genre {
+export interface Genre {
   id: number;
   name: string;
 }
 
-interface FetchMoviePayload {
+export interface FetchMoviePayload {
   type: string;
 }
 
