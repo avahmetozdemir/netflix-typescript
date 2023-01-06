@@ -1,16 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import Footer from "../components/HomePage/Footer";
 import Row from "../components/HomePage/Row";
 import BannerPage from "../components/TvShowsPage/BannerPage";
 import Genres from "../components/TvShowsPage/Genres";
 import SubNavbar from "../components/TvShowsPage/SubNavbar";
 import Navbar from "../components/UI/Navbar";
+import Rows from "../components/UI/Rows";
 import { categories } from "../data";
+import { fetchMovies } from "../redux/features/NetflixSlice";
+import { RootState, useAppDispatch } from "../redux/store";
 
 function MoviesPage() {
   const [showSuggestion, setShowSuggestion] = useState<boolean>(false);
   const [showBannerPage, setShowBannerPage] = useState<boolean>(true);
   const [showGender, setShowGender] = useState<boolean>(false);
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchMovies({ type: "all" }));
+  }, [dispatch]);
+  const movies = useSelector((state: RootState) => state.netflix.movies);
 
   //   const genresRef = useRef(null);
 
@@ -47,6 +57,7 @@ function MoviesPage() {
           <BannerPage />
         </div>
       )}
+      <Rows movies={movies} />
 
       <Footer />
     </div>

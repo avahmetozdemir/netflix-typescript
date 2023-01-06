@@ -1,25 +1,15 @@
-import React, { useEffect, useState } from "react";
-import { films } from "../../data";
-import Movie from "./Movie";
+import { Movie } from "../UI/Rows";
+import MovieImg from "./MovieImg";
 
-interface Film {
-  id: number;
-  title: string;
-  banner: string;
-  time: string;
-  forAdults: boolean;
-  types: string[];
+interface MoviesProps {
+  movies: Array<Movie>;
 }
 
-interface Films {
-  films: Array<Film>;
-}
-
-function Movies() {
+function Movies({ movies }: MoviesProps) {
   return (
     <div className="mx-10 flex flex-wrap space-x-2 items-center justify-center">
-      {films.map((film) => (
-        <Movie imgUrl={film.banner} />
+      {movies.map((movie) => (
+        <MovieImg imgUrl={`https://image.tmdb.org/t/p/w500${movie.image}`} />
       ))}
     </div>
   );

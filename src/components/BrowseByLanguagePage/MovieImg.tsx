@@ -1,10 +1,8 @@
-import React from "react";
-
 interface MovieProp {
   imgUrl: string;
 }
 
-function Movie({ imgUrl }: MovieProp) {
+function MovieImg({ imgUrl }: MovieProp) {
   return (
     <img
       src={imgUrl}
@@ -14,4 +12,4 @@ function Movie({ imgUrl }: MovieProp) {
   );
 }
 
-export default Movie;
+export default MovieImg;

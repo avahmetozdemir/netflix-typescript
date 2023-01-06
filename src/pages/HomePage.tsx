@@ -8,7 +8,6 @@ import { fetchMovies, getGenres } from "../redux/features/NetflixSlice";
 import Rows from "../components/UI/Rows";
 
 function HomePage() {
-  const genres = useSelector((state: RootState) => state.netflix.genres);
   const dispatch = useAppDispatch();
   useEffect(() => {
     dispatch(getGenres());
@@ -18,8 +17,6 @@ function HomePage() {
     dispatch(fetchMovies({ type: "all" }));
   }, [dispatch]);
   const movies = useSelector((state: RootState) => state.netflix.movies);
-
-  console.log(movies);
 
   return (
     <div className="min-h-screen bg-[#181512]">
