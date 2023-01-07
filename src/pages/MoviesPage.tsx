@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Footer from "../components/HomePage/Footer";
-import Row from "../components/HomePage/Row";
 import BannerPage from "../components/TvShowsPage/BannerPage";
 import Genres from "../components/TvShowsPage/Genres";
 import SubNavbar from "../components/TvShowsPage/SubNavbar";
 import Navbar from "../components/UI/Navbar";
 import Rows from "../components/UI/Rows";
-import { categories } from "../data";
 import { fetchMovies } from "../redux/features/NetflixSlice";
 import { RootState, useAppDispatch } from "../redux/store";
 
@@ -47,7 +45,7 @@ function MoviesPage() {
         setShowSuggestion={setShowSuggestion}
       />
       {showGender && (
-        <div className="absolute left-[210px]">
+        <div className="absolute z-10 left-[210px]">
           <Genres />
         </div>
       )}

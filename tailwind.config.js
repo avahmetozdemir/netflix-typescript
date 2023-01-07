@@ -2,7 +2,11 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      zIndex: {
+        "100": "100",
+      },
+    },
     height: {
       "10v": "10vh",
       "20v": "20vh",

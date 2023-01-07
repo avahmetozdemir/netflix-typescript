@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Movies from "./components/BrowseByLanguagePage/Movies";
+import AccountPage from "./pages/AccountPage";
 import BrowseByLanguagePage from "./pages/BrowseByLanguagePage";
 import HomePage from "./pages/HomePage";
 import MoviesPage from "./pages/MoviesPage";
@@ -23,6 +24,7 @@ function App() {
         <Route path="/browse/tv-shows" element={<TvShowsPage />} />
         <Route path="/browse/movies" element={<MoviesPage />} />
         <Route path="/latest" element={<NewAndPopularPage />} />
+        <Route path="/YourAccount" element={<AccountPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

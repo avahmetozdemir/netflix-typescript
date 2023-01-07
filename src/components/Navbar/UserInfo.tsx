@@ -3,6 +3,7 @@ import { BsPencil } from "react-icons/bs";
 import { BiHomeSmile } from "react-icons/bi";
 import { VscAccount } from "react-icons/vsc";
 import { MdOutlineHelpOutline } from "react-icons/md";
+import { Link } from "react-router-dom";
 function UserInfo() {
   return (
     <div className="bg-black/40 w-[200px] h-[300px] border-2 border-white ">
@@ -35,7 +36,9 @@ function UserInfo() {
         </div>
         <div className="flex p-2 space-x-3 cursor-pointer">
           <VscAccount size={24} color="#7A7479" />{" "}
-          <span className="text-white">Account</span>{" "}
+          <span className="text-white">
+            <Link to="/YourAccount">Account</Link>
+          </span>{" "}
         </div>
         <div className="flex p-2 space-x-3 cursor-pointer">
           <MdOutlineHelpOutline size={24} color="#7A7479" />{" "}

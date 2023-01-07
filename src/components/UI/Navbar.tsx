@@ -23,7 +23,7 @@ function Navbar() {
 
   return (
     <>
-      <div className="flex justify-between mx-10 h-[75px]">
+      <div className="flex justify-between  px-10 h-[75px] bg-[#181512]">
         {/* left */}
         <div className="flex items-center">
           <Link to="/">

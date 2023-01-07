@@ -1,9 +1,7 @@
-import React from "react";
-import { Genre } from "../../redux/features/NetflixSlice";
 import Row from "../HomePage/Row";
 
 export interface Movie {
-  genres?: Array<Genre>;
+  genres?: Array<string>;
   id: number;
   image?: string;
   name?: string;
@@ -14,13 +12,11 @@ interface RowsProps {
 }
 
 function Rows({ movies }: RowsProps) {
-  console.log(typeof movies);
-
   const getMoviesFromRange = (from: number, to: number) => {
     return movies?.slice(from, to);
   };
   return (
-    <div>
+    <div className="">
       <Row data={getMoviesFromRange(0, 10)} title="Trending Now" />
       <Row data={getMoviesFromRange(10, 20)} title="New Releases" />
       <Row data={getMoviesFromRange(20, 30)} title="Political Shows" />
