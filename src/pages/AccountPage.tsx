@@ -1,8 +1,10 @@
 import React from "react";
 import Navbar from "../components/UI/Navbar";
-import { MdOutlineVideoLibrary } from "react-icons/md";
+import { MdOutlineVideoLibrary, MdFiberNew } from "react-icons/md";
 import { FaCcVisa } from "react-icons/fa";
 import { IoChevronDownOutline } from "react-icons/io5";
+import Footer from "../components/HomePage/Footer";
+
 function AccountPage() {
   return (
     <div>
@@ -82,15 +84,20 @@ function AccountPage() {
           </div>
         </div>
         <div className="flex flex-row justify-between border-b border-gray-300 p-2">
-          <h1>PLAN DETAILS</h1>
-          <h2>Premium ULTRA HD</h2>
+          <h1 className="text-gray-500 text-lg">PLAN DETAILS</h1>
+          <h2>
+            Premium{" "}
+            <span className=" font-medium  border border-gray-400 p-1">
+              ULTRA <span className="font-bold">HD</span>
+            </span>
+          </h2>
           <div></div>
           <p className="text-blue-600 hover:underline cursor-pointer">
             Change plan
           </p>
         </div>
         <div className="flex flex-row justify-between  border-b border-gray-300 p-2">
-          <h1>SECURITY & PRIVACY</h1>
+          <h1 className="text-gray-500 text-lg">SECURITY & PRIVACY</h1>
           <div className="w-[300px]">
             <p>
               Control access to this account, view the most recently active
@@ -117,7 +124,7 @@ function AccountPage() {
           </div>
         </div>
         <div className="flex flex-row justify-between border-b border-gray-300 p-2">
-          <h1 className="">PROFILE & PARENTAL CONTROLS</h1>
+          <h1 className="text-gray-500 text-lg">PROFILE & PARENTAL CONTROLS</h1>
           <div className="flex flex-col">
             <div className="flex flex-row space-x-10 justify-between p-2 border-b border-gray-300">
               <div className="flex flex-row space-x-5 items-center">
@@ -169,7 +176,28 @@ function AccountPage() {
             </div>
           </div>
         </div>
+        <div className="flex flex-row space-x-[150px] p-2 ">
+          <h1 className="text-gray-500 text-lg">SETTINGS</h1>
+          <div className="flex flex-col space-y-2">
+            <p className="text-blue-600 hover:underline cursor-pointer">
+              18+ Content PIN
+            </p>{" "}
+            <div className="flex items-center space-x-2">
+              <p className="text-blue-600 hover:underline cursor-pointer">
+                Turn off profile transfers
+              </p>
+              <MdFiberNew size={24} color="blue" />
+            </div>
+            <p className="text-blue-600 hover:underline cursor-pointer">
+              Test participation
+            </p>{" "}
+            <p className="text-blue-600 hover:underline cursor-pointer">
+              Manage download devices
+            </p>
+          </div>
+        </div>
       </div>
+      <Footer />
     </div>
   );
 }
