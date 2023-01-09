@@ -44,7 +44,9 @@ function UserInfo() {
         </div>
         <div className="flex p-2 space-x-3 cursor-pointer">
           <MdOutlineHelpOutline size={24} color="#7A7479" />{" "}
-          <span className="text-white">Help Center</span>{" "}
+          <span className="text-white">
+            <Link to="/helpcenter">Help Center</Link>
+          </span>{" "}
         </div>
       </div>
       <div className="flex items-center justify-center mt-2 cursor-pointer ">

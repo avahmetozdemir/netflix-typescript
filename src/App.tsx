@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Movies from "./components/BrowseByLanguagePage/Movies";
 import AccountPage from "./pages/AccountPage";
 import BrowseByLanguagePage from "./pages/BrowseByLanguagePage";
+import HelpPage from "./pages/HelpPage";
 import HomePage from "./pages/HomePage";
 import ManageProfiles from "./pages/ManageProfiles";
 import MoviesPage from "./pages/MoviesPage";
@@ -27,6 +28,7 @@ function App() {
         <Route path="/latest" element={<NewAndPopularPage />} />
         <Route path="/YourAccount" element={<AccountPage />} />
         <Route path="/profiles/manage" element={<ManageProfiles />} />
+        <Route path="/helpcenter" element={<HelpPage />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>
