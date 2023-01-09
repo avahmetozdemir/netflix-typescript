@@ -3,6 +3,7 @@ import Movies from "./components/BrowseByLanguagePage/Movies";
 import AccountPage from "./pages/AccountPage";
 import BrowseByLanguagePage from "./pages/BrowseByLanguagePage";
 import HomePage from "./pages/HomePage";
+import ManageProfiles from "./pages/ManageProfiles";
 import MoviesPage from "./pages/MoviesPage";
 import MyListPage from "./pages/MyListPage";
 import NewAndPopularPage from "./pages/NewAndPopularPage";
@@ -25,6 +26,7 @@ function App() {
         <Route path="/browse/movies" element={<MoviesPage />} />
         <Route path="/latest" element={<NewAndPopularPage />} />
         <Route path="/YourAccount" element={<AccountPage />} />
+        <Route path="/profiles/manage" element={<ManageProfiles />} />
         <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </BrowserRouter>

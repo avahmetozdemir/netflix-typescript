@@ -28,7 +28,9 @@ function UserInfo() {
       <div className="border-b border-gray-300">
         <div className="flex p-2 space-x-3 cursor-pointer">
           <BsPencil size={24} color="#7A7479" />{" "}
-          <span className="text-white">Manage Profile</span>{" "}
+          <span className="text-white">
+            <Link to="/profiles/manage">Manage Profile</Link>
+          </span>{" "}
         </div>
         <div className="flex p-2 space-x-3 cursor-pointer">
           <BiHomeSmile size={24} color="#7A7479" />{" "}
