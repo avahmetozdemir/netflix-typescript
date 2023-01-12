@@ -1,5 +1,7 @@
 import React from "react";
 import Banner from "../components/GetStartedPage/Banner";
+import Footer from "../components/GetStartedPage/Footer";
+import FrequentlyQuestions from "../components/GetStartedPage/FrequentlyQuestions";
 import Kids from "../components/GetStartedPage/Kids";
 import ShowTv from "../components/GetStartedPage/ShowTv";
 import WatchEverywhere from "../components/GetStartedPage/WatchEverywhere";
@@ -19,8 +21,9 @@ function GetStartedPage() {
       {/* for kids */}
       <Kids />
       {/* frequently asked questions */}
-
+      <FrequentlyQuestions />
       {/* footer */}
+      <Footer />
     </div>
   );
 }
