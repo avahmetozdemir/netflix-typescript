@@ -1,7 +1,17 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState } from "react";
+import {
+  BrowserRouter,
+  Navigate,
+  NavigateFunction,
+  redirect,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
 import Movies from "./components/BrowseByLanguagePage/Movies";
 import AccountPage from "./pages/AccountPage";
 import BrowseByLanguagePage from "./pages/BrowseByLanguagePage";
+import GetStartedPage from "./pages/GetStartedPage";
 import HelpPage from "./pages/HelpPage";
 import HomePage from "./pages/HomePage";
 import ManageProfiles from "./pages/ManageProfiles";
@@ -13,10 +23,12 @@ import StartingPage from "./pages/StartingPage";
 import TvShowsPage from "./pages/TvShowsPage";
 
 function App() {
+  const [auth, setAuth] = useState(false);
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<StartingPage />} />
+        <Route path="/" element={!auth && <GetStartedPage />} />
+
         <Route path="/browse" element={<HomePage />} />
         <Route path="/browse/mylist" element={<MyListPage />} />
         <Route
