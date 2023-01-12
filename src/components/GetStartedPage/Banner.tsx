@@ -10,7 +10,7 @@ function Banner() {
         src="https://veneportal.com/noticias/wp-content/uploads/sites/2/2021/03/Netflix-d7bf70ec-750x430.jpg"
         alt=""
       />
-      <div className="absolute top-0 bg-black/40 w-full h-[750px] border-b-[8px] border-gray-500 ">
+      <div className="absolute top-0 bg-black/40 w-full h-[750px] border-b-[8px] border-gray-700 ">
         <NavbarForBanner />
         <BannerMain />
       </div>
