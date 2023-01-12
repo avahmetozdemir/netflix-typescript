@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
 import NetflixReducer from "./features/NetflixSlice";
+import AuthReducer from "./features/AuthSlice";
 export const store = configureStore({
   reducer: {
     netflix: NetflixReducer,
+    auth: AuthReducer,
   },
 });
 

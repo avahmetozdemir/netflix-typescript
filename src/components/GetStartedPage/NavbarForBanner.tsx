@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../../assets/icons/netflix.png";
 import { TbWorld } from "react-icons/tb";
+import { Link } from "react-router-dom";
 function NavbarForBanner() {
   return (
     <div className="flex w-[1806px] h-[100px] justify-between px-10 pt-5 items-center">
@@ -19,7 +20,9 @@ function NavbarForBanner() {
           </select>
         </div>
         <div className="bg-red-500 rounded-md w-[80px] flex items-center justify-center cursor-pointer">
-          <h3 className="text-white font-semibold ">Sign In</h3>
+          <h3 className="text-white font-semibold ">
+            <Link to="/tr-en/login">Sign In</Link>
+          </h3>
         </div>
       </div>
     </div>

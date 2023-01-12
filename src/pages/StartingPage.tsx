@@ -1,7 +1,7 @@
-import React from "react";
+import React, { useEffect, useLayoutEffect } from "react";
 import UserLogin from "../components/StartingPage/UserLogin";
 import plusIcon from "../assets/icons/plus.png";
-import { Link } from "react-router-dom";
+import { Link, redirect, useNavigate } from "react-router-dom";
 const users = [
   {
     id: 1,
@@ -29,6 +29,8 @@ const users = [
 ];
 
 function StartingPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-[#181512] flex justify-center items-center ">
       <div className="flex flex-col">
